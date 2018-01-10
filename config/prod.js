@@ -4,3 +4,4 @@ module.exports = {
     monogoURI: process.env.MONGO_URI,
     cookieKey: process.env.COOKIE_KEY
 }
+
