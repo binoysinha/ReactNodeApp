@@ -1,5 +1,5 @@
 {
-  "name": "ReactNodeApp",
+  "name": "react-node-app",
   "version": "1.0.0",
   "description": "A full stack React-Redux app using Node js",
   "main": "index.js",
@@ -9,7 +9,9 @@
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,7 @@
   },
   "homepage": "https://github.com/binoysinha/ReactNodeApp#readme",
   "dependencies": {
+    "concurrently": "^3.5.1",
     "cookie-session": "^2.0.0-beta.3",
     "express": "^4.16.2",
     "mongoose": "^5.0.0-rc0",
